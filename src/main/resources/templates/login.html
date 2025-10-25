@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Ciberfarma</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container w-50 bg-light rounded shadow">
+		<h1>Acceso al sistema</h1>
+		<form action="/login" method="post">
+			<div class="mb-3">
+				<label for="" class="form-label">Usuario</label>
+				<input type="email" name="txtUsuario" class="form-control" id="">
+			</div>
+			<div class="mb-3">
+				<label for="" class="form-label">Contraseña</label>
+				<input type="password" name="txtClave" class="form-control" id="">
+			</div>
+			<div class="mb-3">
+				<button type="submit" class="btn btn-primary">Ingresar</button>	
+			</div>
+			<div class="mb-3">
+				<p>Para registrar su cuenta, pulse <a href="">aquí</a></p>	
+			</div>
+			<div role="alert" th:class="${cssmensaje}" th:text="${mensaje}"></div>
+			<br>
+		</form>
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
